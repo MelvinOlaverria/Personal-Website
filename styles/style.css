@@ -37,6 +37,7 @@ header {
 
 #mainHeadline {
     position: relative;
+    width: 65%;
     top: 13em;
     left: 10em;
     color: #fff;
@@ -50,19 +51,29 @@ header {
     background-size: cover;
     background-position: center;
     height: 80vh;
-    margin: 1%;
+    margin: 1% 1% 8% 1%;
+    background-attachment: fixed;
 }
 
 /*---------LOGO----------*/
 
-#logoOthers {
+.logo {
     font-size: 25px;
     color: #fff;
     text-decoration: none;
 }
 
-#logoOthers span {
+.logo span {
     color: orange;
+}
+
+/*---------LOGO-MEDIA-QUERIES----------*/
+
+@media screen and (max-width:595px) {
+    .logo {
+        font-size: 15px;
+        margin-right: -20px;
+    }
 }
 
 /*---------LOGO-HOME----------*/
@@ -99,7 +110,6 @@ nav {
     justify-content: space-between;
     align-items:center;
     text-transform: uppercase;
-    font-size: 1.8rem;
 }
 
 nav ul li a span {
@@ -111,12 +121,13 @@ nav ul {
 }
 
 nav ul li a {
-    padding: 1rem 0; 
-    margin: 0 3rem;
+    margin: 0 2rem;
+    padding: 5px 0 5px 0;
     position: relative;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #fff;
     text-decoration:none;
+    font-size: 1.8rem;
 }
 
 nav ul li a::before,
@@ -147,10 +158,33 @@ nav ul li a:hover:after {
 }
 
 
-#navOthers ul li {
+nav ul li {
     list-style: none;
 }
 
+/*------NAV-MEDIA-QUERIES----*/
+
+@media screen and (max-width:850px) {
+    nav ul li a,
+    .navOthers ul li a {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:775px) {
+    nav ul li a,
+    .navOthers ul li a {
+        font-size: 1.29em;
+    }
+}
+
+@media screen and (max-width:660px) {
+    nav ul li a,
+    .navOthers ul li a {
+        font-size: 1em;
+    }
+    
+}
 
 /*---------NAVIGATION-HOME----------*/
 
@@ -210,13 +244,38 @@ h2 {
     justify-content: center;
     color:orange;
     border: 1px solid white;
-    width: 30%;
+    width: 30vw;
     margin: 2.2em auto;
     padding: 1.5%;
     font-weight: 800;
     background-color: rgba(255, 255, 255, 0.20);
 }
 
+/*---------HEADING-MEDIA-QUERIES----------*/
+
+@media screen and (max-width:1000px) {
+    h2 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width:850px) {
+    h2 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width:650px) {
+    h2 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width:850px) {
+    h1 {
+        font-size: 2.3em;
+    }
+}
 
 
 /*---------BUTTONS----------*/
@@ -240,54 +299,22 @@ h2 {
 
 /*---------PORTFOLIO-IMAGES----------*/
 
-
-#imageContainer,
-#imageContainer1 {
-    display: flex;
-    justify-content: space-around;
-}
-
-#imageContainer {
-    width: 85%;
+.portfolioContainer {
+   background-color: #fff;  
+    width: 84%;
+    height: auto;
     margin: 0 auto;
     position: relative;
-    bottom: 8em;
-    padding-bottom: 5em;
-    background-color: white;
+    bottom: 17em;
+    padding: 1% 0 1% 0;
 }
 
-#imageContainer1 {
-    width: 95%;
+.portfolioContainer figure img {
+    width: 250px;
+    padding: 1%;
+}
+
+.portfolioContainer figure {
+    width: inherit;
     margin: 0 auto;
-    background-color: white;
-    padding: 5.2em;
 }
-
-#imageContainer img {
-    height: 34em;
-    margin-top: 5em;
-    transform: scale(1);
-    background-color: white;
-    opacity: 1;
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-#imageContainer img:hover {
-    transform: scale(1.1);
-    opacity: 0.97;
-}
-
-#imageContainer1 img {
-    height: 50em;
-    transform: scale(1);
-    transition: transform 0.5s;
-}
-
-#imageContainer1 img:hover {
-        transform: scale(1.1);
-}
-
-#imageContainer1 img:nth-child(2) {
-    
-}
-
