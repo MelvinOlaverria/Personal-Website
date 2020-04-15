@@ -10,28 +10,82 @@ html {
     font-size: 10px;
 }
 
-body {
-    overflow-x: hidden;
+@font-face {
+	font-family: "Roboto Condensed";
+	font-weight: 400;
+	src: url(/fonts/RobotoCondensed-Regular.ttf);
 }
 
-/*---------HOMEPAGE HEADER----------*/
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed';
+}
+
+#portfolioBody {
+    background-color: rgba(181, 177, 177, 0.37);
+}
+
+/*---------HOMEPAGE-HEADER----------*/
 
 header {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/img/HeroImage1.JPG);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(/img/MainHeaderImg.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     width: 100%;
-    
 }
 
 #mainHeadline {
-    position: absolute;
-    top: 50%;
-    left: 10%;
+    position: relative;
+    top: 13em;
+    left: 10em;
     color: #fff;
     font-size: 1.5em;
 }
+
+/*---------PORTFOLIO-HEADER----------*/
+
+#portfolioHeader {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.87),rgba(0, 0, 0, 0)) , url(/img/PortfolioHeaderImg.JPG);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    margin: 1%;
+}
+
+/*---------LOGO----------*/
+
+#logoOthers {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#logoOthers span {
+    color: orange;
+}
+
+/*---------LOGO-HOME----------*/
+
+#logoHome {
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#logoPortfolio {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#logoHome span {
+    color: orange;
+}
+
+/*---------NAVIGATION----------*/
 
 .navContainer {
     max-width: 120rem;
@@ -45,12 +99,7 @@ nav {
     justify-content: space-between;
     align-items:center;
     text-transform: uppercase;
-    font-size: 1.6rem;
-}
-
-.logo {
-    transform: translateX(-100rem);
-    animation: slideIn .5s forwards;
+    font-size: 1.8rem;
 }
 
 nav ul li a span {
@@ -61,36 +110,6 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    list-style: none;
-    transform: translateX(100rem);
-    animation: slideIn .5s forwards;
-}
-
-nav ul li:nth-child(1){
-    animation-delay: 0s;
-}
-
-nav ul li:nth-child(2){
-    animation-delay: .5s;
-}
-
-nav ul li:nth-child(3){
-    animation-delay: 1s;
-}
-
-nav ul li:nth-child(4){
-    animation-delay: 1.5s;
-}
-
-nav ul li:nth-child(5){
-    animation-delay: 2s;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
 nav ul li a {
     padding: 1rem 0; 
     margin: 0 3rem;
@@ -99,7 +118,6 @@ nav ul li a {
     color: #fff;
     text-decoration:none;
 }
-
 
 nav ul li a::before,
 nav ul li a::after {
@@ -128,6 +146,46 @@ nav ul li a:hover:after {
     transform: scalex(1);
 }
 
+
+#navOthers ul li {
+    list-style: none;
+}
+
+
+/*---------NAVIGATION-HOME----------*/
+
+
+#navHome ul li {
+    list-style: none;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+#navHome ul li:nth-child(1){
+    animation-delay: 0s;
+}
+
+#navHome ul li:nth-child(2){
+    animation-delay: .5s;
+}
+
+#navHome ul li:nth-child(3){
+    animation-delay: 1s;
+}
+
+#navHome ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+#navHome ul li:nth-child(5){
+    animation-delay: 2s;
+}
+
+#navHome ul li:last-child {
+    margin-right: 0;
+}
+
+
 @keyframes slideIn {
     from {
         
@@ -137,19 +195,99 @@ nav ul li a:hover:after {
     }
 }
 
+
 /*---------HEADINGS----------*/
 
 h1 {
     margin-bottom: 40px;
+    font-size: 2.7em;
 }
+
+h2 {
+    font-size: 6em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color:orange;
+    border: 1px solid white;
+    width: 30%;
+    margin: 2.2em auto;
+    padding: 1.5%;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+
 
 /*---------BUTTONS----------*/
 
 .btn:link,
 .btn:visited {
+    font-size: 1.3em;
     border: 2px solid orange;
     padding: 10px 30px;
     border-radius: 90px;
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
+
+.btn:hover,
+.btn:active {
+    border: 2px solid white;
+    background-color: rgba(155, 100, 0, 0.4);
+}
+
+/*---------PORTFOLIO-IMAGES----------*/
+
+
+#imageContainer,
+#imageContainer1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#imageContainer {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 8em;
+    padding-bottom: 5em;
+    background-color: white;
+}
+
+#imageContainer1 {
+    width: 95%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 5.2em;
+}
+
+#imageContainer img {
+    height: 34em;
+    margin-top: 5em;
+    transform: scale(1);
+    background-color: white;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#imageContainer img:hover {
+    transform: scale(1.1);
+    opacity: 0.97;
+}
+
+#imageContainer1 img {
+    height: 50em;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+#imageContainer1 img:hover {
+        transform: scale(1.1);
+}
+
+#imageContainer1 img:nth-child(2) {
+    
+}
+
