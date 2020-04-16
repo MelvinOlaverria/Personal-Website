@@ -25,6 +25,11 @@ body {
     background-color: rgba(181, 177, 177, 0.37);
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /*---------HOMEPAGE-HEADER----------*/
 
 header {
@@ -57,14 +62,8 @@ header {
 
 /*---------LOGO----------*/
 
-.logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.logo span {
-    color: orange;
+#brandPortfolio {
+    animation: none;
 }
 
 /*---------LOGO-MEDIA-QUERIES----------*/
@@ -76,25 +75,6 @@ header {
     }
 }
 
-/*---------LOGO-HOME----------*/
-
-#logoHome {
-    transform: translateX(-100rem);
-    animation: slideIn .5s forwards;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-}
-
-#logoPortfolio {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-}
-
-#logoHome span {
-    color: orange;
-}
 
 /*---------NAVIGATION----------*/
 
@@ -108,11 +88,16 @@ nav {
     padding-top: 5rem;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     text-transform: uppercase;
 }
 
-nav ul li a span {
+nav h1 {
+    flex: 4;
+    font-weight:300;
+}
+
+nav h1 span {
     color: orange;
 }
 
@@ -120,114 +105,99 @@ nav ul {
     display: flex;
 }
 
-nav ul li a {
-    margin: 0 2rem;
-    padding: 5px 0 5px 0;
-    position: relative;
-    letter-spacing: 1px;
-    color: #fff;
-    text-decoration:none;
-    font-size: 1.8rem;
+nav ul li {
+    list-style: none;
+    padding: 2em;
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
 }
 
-nav ul li a::before,
-nav ul li a::after {
-    content: '';
+nav li a {
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 0 2px 0;
+}
+
+#staticNav ul li {
+    animation: none;
+    transform: none;
+}
+
+/*--------NAVIGATION-ANIMATION----*/
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a:before,
+nav ul li a:after {
+    content:'';
     position: absolute;
     width: 100%;
-    height: 1px;
-    background-color: orange;
+    height: 2px;
+    background: orange;
     left: 0;
-    transform:scaleX(0);
+    transform: scaleX(0);
     transition: all .5s;
 }
 
-nav ul li a::before {
-    top:0;
+nav ul li a:before {
+    top: 0;
     transform-origin: left;
 }
 
-nav ul li a::after {
-    bottom:0;
+nav ul li a:after {
+    bottom: 0;
     transform-origin: right;
 }
 
 nav ul li a:hover:before,
 nav ul li a:hover:after {
-    transform: scalex(1);
+    transform: scaleX(1);
 }
 
-
-nav ul li {
-    list-style: none;
-}
-
-/*------NAV-MEDIA-QUERIES----*/
-
-@media screen and (max-width:850px) {
-    nav ul li a,
-    .navOthers ul li a {
-        font-size: 1.5em;
-    }
-}
-
-@media screen and (max-width:775px) {
-    nav ul li a,
-    .navOthers ul li a {
-        font-size: 1.29em;
-    }
-}
-
-@media screen and (max-width:660px) {
-    nav ul li a,
-    .navOthers ul li a {
-        font-size: 1em;
-    }
-    
-}
-
-/*---------NAVIGATION-HOME----------*/
-
-
-#navHome ul li {
-    list-style: none;
-    transform: translateX(100rem);
-    animation: slideIn .5s forwards;
-}
-
-#navHome ul li:nth-child(1){
-    animation-delay: 0s;
-}
-
-#navHome ul li:nth-child(2){
-    animation-delay: .5s;
-}
-
-#navHome ul li:nth-child(3){
-    animation-delay: 1s;
-}
-
-#navHome ul li:nth-child(4){
-    animation-delay: 1.5s;
-}
-
-#navHome ul li:nth-child(5){
-    animation-delay: 2s;
-}
-
-#navHome ul li:last-child {
-    margin-right: 0;
-}
-
+/*--------HOME-NAVIGATION-SLIDEIN-TRANSITION-----*/
 
 @keyframes slideIn {
     from {
         
     }
+    
     to {
-        transform: translatex(0);
+        transform: translateX(0);
     }
 }
+
+#brand {
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+nav li:nth-child(1){
+    animation-delay: 0s;
+}
+
+nav li:nth-child(2){
+    animation-delay: .5s;
+}
+
+nav li:nth-child(3){
+    animation-delay: 1s;
+}
+
+nav li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+nav li:nth-child(5){
+    animation-delay: 2s;
+}
+
+/*------NAV-MEDIA-QUERIES----*/
+
+
+/*---------NAVIGATION-HOME----------*/
 
 
 /*---------HEADINGS----------*/
@@ -238,16 +208,14 @@ h1 {
 }
 
 h2 {
-    font-size: 6em;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
     color:orange;
+    font-size: 6em;
+    padding: 2%;
+    text-transform: uppercase;
+    text-align: center;
+    width:30%;
+    margin: 0 auto;
     border: 1px solid white;
-    width: 30vw;
-    margin: 2.2em auto;
-    padding: 1.5%;
-    font-weight: 800;
     background-color: rgba(255, 255, 255, 0.20);
 }
 
