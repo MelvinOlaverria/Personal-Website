@@ -1,4 +1,4 @@
-/*====================BASIS====================*/
+/*******************************GLOBAL*******************************/
 
 * {
     padding: 0;
@@ -7,130 +7,488 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 10px;
     font-family: 'Aileron';
 }
 
+
 @font-face {
     font-family:'Aileron';
-    src: url (/fonts/Aileron-Regular.ttf);
+    src: url(fonts/Aileron-Regular.ttf);
 }
-
 
 a {
     text-decoration: none;
 }
-/*====================HEADERS====================*/
 
-/*----------HOME-HEADER----------*/
-#homeHeader {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.29)), url(/img/MainHeaderImg.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+ul {
+    list-style: none;
 }
 
-/*----------PORTFOLIO-HEADER----------*/
 
-#portfolioHeader {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.29)) , url(/img/Moon.jpg);
-    background-size:cover;
-    background-position: center;
-    height: 100vh;
+
+
+
+
+/*________________________________HOME-PAGE________________________________*/
+
+
+
+
+
+
+/*==========================NAVBAR==========================*/
+
+.navbar {
+    width: 95%;
+    margin: 0 auto;
 }
 
-/*====================NAVBAR====================*/
 .navbar-brand {
     color: #fff;
-    font-size: 2.5em !important; 
-    transition: color 0.5s;
+    font-size: 3.2rem!important;
     font-family: 'Aileron';
     font-weight: 300;
+}
+
+.nav-link {
+    color: white!important;
+    font-size: 2.08rem;
+    letter-spacing: 2px;
+    font-family: 'Aileron';
+    font-weight: 100;
+}
+
+.nav-item {
+    padding-right: 3em;
 }
 
 
 .nav-link:hover,
 .navbar-brand:hover {
     color: rgba(115, 222, 191, 0.93)!important;
-}
-
-.nav-link {
-    color: white!important;
-    font-size: 1.3em;
-    letter-spacing: 2px;
     transition: color 0.5s;
-    font-family: 'Aileron';
-    font-weight: 100;
 }
 
+/*==========================HEADERS==========================*/
+/*----------HOME-HEADER----------*/
 
+#homeHeader {
+    background-image: linear-gradient(200deg,rgba(0, 0, 0, 0.99), rgba(255, 255, 255, 0.03)), url(/img/MainHeaderImg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
 
-/*====================HEADINGS====================*/
-
+/*==========================HEADINGS==========================*/
 /*----------HOME-HEADING----------*/
+
+#mainHeadline {
+    text-align: center;
+}
+
+#mainHeadline h1 {
+    font-size: 3.6rem;
+    color: #fff;
+    margin-bottom: .5em;
+    margin-top: 4em;
+    font-weight: 400;
+    font-family: 'Aileron';
+}
 
 #mainHeadline a {
     border: 2px #ffffff solid;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: .5em 1.1em;
     color: rgba(115, 222, 191, 0.93);
-    font-size: 1.2em;
+    font-size: 2.4em;
     text-transform: capitalize;
     letter-spacing: 1px;
     font-family: 'Alcubierre';
 }
 
-#mainHeadline {
-    text-align: center;
-    margin-top: 10%;
+/*==========================BUTTONS==========================*/
+/*----------HOMEBUTTON----------*/
+
+
+.btn:hover {
+    animation: animate 8s linear infinite;
+    background:linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    color: #fff!important;
+    background-color: rgba(135, 232, 204, 0.67);
+    border: white 2px solid;
 }
 
-#mainHeadline h1 {
-    color: #fff;
-    margin-bottom: 30px;
-    font-weight: 400;
+
+@keyframes animate {
+    0%{
+        background-position:0%;
+
+    }
+    100% {
+        background-position: 100%;
+    
+    }
+    
 }
 
+/*==========================QUERIES==========================*/
+/*----------HOME-HEADER-QUERY----------*/
+
+@media screen and (min-width:1000px) {
+    
+    #mainHeadline h1 {
+        font-size: 4rem;
+    }
+}
+
+/*==========================FOOTERS==========================*/
+/*----------HOME-FOOTER----------*/
+
+#homeFooter {
+    background-color:rgb(46, 7, 178);
+
+}
+
+
+
+
+
+/*________________________________PORTFOLIO-PAGE________________________________*/
+
+
+
+
+
+/*==========================HEADERS==========================*/
+/*----------PORTFOLIO-HEADER----------*/
+
+#portfolioHeader {
+    background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.38)) , url(/img/Moon.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/*==========================HEADINGS==========================*/
 /*----------PORTFOLIO-HEADING----------*/
 
 #portfolioHeadline {
-    width: 50vw;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20em;
     text-align: center;
 }
 
 #portfolioHeadline h2 {
-    font-size: 7vw;
+    font-size: 7rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: .3em 0 .3em 0;
     background-color: rgba(255, 255, 255, 0.31);
     border: 1px solid white;
     color: #ffffff;
     text-transform: uppercase;
-    padding: 5%
 }
 
+/*==========================IMAGES==========================*/
+/*----------PORTFOLIO-IMAGES----------*/
 
-/*====================BUTTONS====================*/
 
-/*----------HOMEBUTTON----------*/
-
-#mainHeadline a:hover {
-    background-color: rgba(135, 232, 204, 0.67);
-    border: white 2px solid;
-    color: white;
-}
-
-/*====================QUERIES====================*/
-
-/*====================PORTFOLIO-IMAGES====================*/
-
-#portfolioContainer {
-    width: 90%;
+#portfolioContainer  {
+    position: relative;
+    bottom: 5em;
+    padding-top: 4em;
+    background-color: #efefef;
+    width: 95%;
     margin: 0 auto;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+#portfolioContainer div:not(.horizontalImg) {
+    width: 39em;
+    margin: 0 auto;
+    height: 48em;
+    overflow: hidden;
+}
+
+.horizontalImg {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 62em;
 }
 
 #portfolioContainer img {
-    display: inline-flex;
-    margin: 2%;
-    justify-content: space-around;
-    height: 250px;
+    transform: scale(0.95);
+    transition: transform 0.5s;
+    width: 100%;
+    height: auto;
+    image-rendering: -moz-crisp-edges;         
+    image-rendering:   -o-crisp-edges;        
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; 
+    padding-top: .5em;
 }
+
+#portfolioContainer img:hover {
+    transform: scale(1);
+}
+
+
+
+/*________________________________ABOUT-ME-PAGE________________________________*/
+
+
+
+
+
+/*==========================HEADERS==========================*/
+/*----------ABOUT-ME-HEADER----------*/
+
+#aboutMeHeader {
+    background-image: linear-gradient(45deg, rgb(0, 53, 85), rgba(20, 140, 203, 0.9), rgb(2, 40, 64),rgb(2, 40, 64));
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#aboutMeText {
+    text-align:left;
+    width: 40%;
+}
+
+#aboutMeContainer {
+    margin-bottom: 6em!important;
+}
+
+/*==========================HEADINGS==========================*/
+/*----------ABOUT-ME-HEADING----------*/
+
+
+#aboutMeText {
+    color: #fff;
+    width: 75%;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    bottom: 3em;
+}
+
+#aboutMeText h3 {
+    text-align: left;
+    font-size: 4rem;
+    line-height: 130%;
+    font-family: 'Alcubierre';
+    margin-bottom: .7em;
+    font-weight: 300;
+}
+
+#aboutMeText p {
+    font-family: 'Aileron';
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 200%;
+}
+
+/*==========================IMAGES==========================*/
+/*----------ABOUT-ME-IMAGES----------*/
+
+#aboutMeContainer figure {
+    margin: 5em auto 2em auto;
+}
+
+#aboutMeContainer figure img {
+    width: 30em;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*==========================FOOTERS==========================*/
+/*----------ABOUT-ME-FOOTER----------*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color:rgba(0, 0, 0, 0.77);
+
+}
+
+.footer1 {
+    display: flex;
+    font-size: 1.5rem;
+    color: #fff;
+    justify-content: space-around;
+}
+
+#footerExplore {
+    font-size: 3rem;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer ul li {
+    color: #fff;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#follow {
+    font-size: 3rem;
+}
+
+/*==========================QUERIES==========================*/
+/*----------ABOUT-ME-HEADER-QUERY----------*/
+
+@media screen and (min-width:1250px) {
+    
+    #aboutMeContainer {
+        display: flex;
+        margin-top: 5em;
+        margin-bottom: 4em;
+    }
+    
+    #aboutMeContainer figure {
+        margin-left: 20em;
+    }
+    
+    #aboutMeContainer figure img {
+        width: 40em;
+    }
+    
+    #aboutMeText {
+        margin-top: 7em;
+    }
+    
+}
+
+
+
+
+/*________________________________ABOUT-ME-PAGE________________________________*/
+
+
+
+
+
+
+#allContent {
+    background-image: linear-gradient(45deg, rgb(0, 53, 85), rgba(20, 140, 203, 0.9), rgb(2, 40, 64),rgb(2, 40, 64));
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    height: 100vh;
+}
+
+#contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    font-family: 'Aileron';
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 4em;
+}
+
+#allContent h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Aileron';
+}
+
+.formItem > * {
+    align-self: flex-start;
+}
+
+form label {
+    font-weight: 600;
+    padding: .5em 0;
+    font-size: 1.5rem;
+}
+
+.formInput {
+    -webkit-appearance:none;
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    font-size: 1.3em;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition:background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.formInput:focus {
+    background: #fff;
+}
+
+.formInput::placeholder{
+    color: #bbbbbb;
+    font-size: 1.2em;
+}
+
+textarea.formInput {
+    resize: none;
+    min-height: 200px;
+}
+
+textarea.formInput::placeholder {
+    font-size: 1.5em!important;
+}
+
+.formBtn {
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 1em 2em;
+    margin: 1em 0;
+    color: #fff;
+    background-color:orange;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+.formBtn:active {
+    background-color: rgba(255, 245, 0, 0.31);
+}
+
