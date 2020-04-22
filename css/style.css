@@ -8,7 +8,7 @@
 
 html {
     font-size: 10px;
-    font-family: 'Aileron'!important;
+    font-family: 'Aileron';
 }
 
 
@@ -18,7 +18,7 @@ html {
 }
 
 a {
-    text-decoration: none!important
+    text-decoration: none;
 }
 
 ul {
@@ -43,9 +43,9 @@ ul {
 }
 
 .navbar-brand {
-    color: #fff!important;
-    font-size: 5rem!important;
-    font-family: 'Aileron'!important;
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Aileron';
     font-weight: 100;
 }
 
@@ -54,7 +54,7 @@ ul {
     color: #fff!important;    
     font-size: 2.3rem;
     letter-spacing: 2px;
-    font-family: 'Aileron'!important;
+    font-family: 'Aileron';
     font-weight: 300;
 }
 
