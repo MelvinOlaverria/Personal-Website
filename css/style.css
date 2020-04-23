@@ -42,6 +42,11 @@ ul {
     margin: 0 auto;
 }
 
+.nav-home {
+    background-color: rgba(0, 0, 0, 0.14);
+}
+
+
 .navbar-brand {
     color: #fff;
     font-size: 5rem;
@@ -59,7 +64,7 @@ ul {
 }
 
 .navbar-nav {
-    margin-right: 10em;
+    margin-right: 5em;
 }
 
 .nav-item {
@@ -77,7 +82,7 @@ ul {
 /*----------HOME-HEADER----------*/
 
 #homeHeader {
-    background: url('img/homeBackground.JPG');
+    background: url('img/homeBackground5.JPG');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -87,15 +92,18 @@ ul {
 /*----------HOME-HEADING----------*/
 
 #mainHeadline {
-    text-align: center;
+    text-align: left;
+    margin-left: 10em;
+    width: 40%;
+    height: auto;
+    margin-top:25em;
 }
 
 #mainHeadline h1 {
-    font-size: 3.6rem;
+    font-size: 4rem!important;
     color: #fff;
     margin-bottom: .5em;
-    margin-top: 4em;
-    font-weight: 400;
+    font-weight: 200;
     font-family: 'Aileron';
 }
 
@@ -103,7 +111,7 @@ ul {
     border: 2px #ffffff solid;
     border-radius: 50px;
     padding: .5em 1.1em;
-    color: rgba(115, 222, 191, 0.93);
+    color: yellow;
     font-size: 2.4em;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -157,7 +165,7 @@ ul {
 /*----------PORTFOLIO-HEADER----------*/
 
 #portfolioHeader {
-    background: url('img/portfolioBackground.JPG'),linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.38));
+    background: url('/css/img/portfolioBackground.JPG'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
@@ -168,17 +176,18 @@ ul {
 /*----------PORTFOLIO-HEADING----------*/
 
 
-header h2 {
-    font-size: 7rem;
-    max-width: 400px;
-    margin: 0 auto;
-    margin-top: 2em;
-    padding: .3em 0 .3em 0;
-    background-color: rgba(255, 255, 255, 0.31);
-    border: 1px solid white;
-    color: #ffffff;
+#portfolioHeader h2 {
+    font-size: 6rem;
+    width: 100%;
+    color: #000;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 2.9em;
+    padding-right: .5em;
+    font-family: 'Aileron';
+    font-weight: 300;
 }
+
 
 /*==========================IMAGES==========================*/
 /*----------PORTFOLIO-IMAGES----------*/
@@ -186,26 +195,27 @@ header h2 {
 
 #portfolioContainer  {
     padding-top: 5em;
-    background: transparent;
     width: 100%;
     margin: 0 auto;
     height: auto;
     flex-wrap: wrap;
     display: flex;
+    padding-bottom: 10em;
 }
 
 #portfolioContainer div:not(.horizontalImg) {
-    width: 39em;
+    width: 30em;
     margin: 0 auto;
-    height: 48em;
+    height: 40em;
     overflow: hidden;
     margin-bottom: 2em;
+    padding-top: 2em;
 }
 
 .horizontalImg {
     margin: 0 auto;
     overflow: hidden;
-    width: 62em;
+    width: 40em;
 }
 
 #portfolioContainer img {
@@ -254,7 +264,7 @@ header h2 {
 /*----------ABOUT-ME-HEADER----------*/
 
 #aboutMeHeader {
-    background-image: linear-gradient(45deg, rgb(1, 24, 38), rgba(5, 83, 124, 0.9), rgb(2, 30, 47),rgb(1, 25, 39));
+    background-image: linear-gradient(45deg, rgb(7, 47, 69), rgb(6, 28, 46), rgba(4, 56, 118, 0.83),rgb(4, 66, 111));
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
@@ -414,17 +424,18 @@ header h2 {
 
 
 #allContent {
-    background-image: linear-gradient(45deg, rgb(1, 24, 38), rgba(5, 83, 124, 0.9), rgb(2, 30, 47),rgb(1, 25, 39));
+    background-image: linear-gradient(45deg, rgb(7, 47, 69), rgb(6, 28, 46), rgba(4, 56, 118, 0.83),rgb(4, 66, 111));
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
+    font-family: 'Aileron';
 }
 
-#allContent h1 {
+#allContent h2 {
     color: #fff;
     text-align: center;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 1em;
     margin-top: .3em;
 }
@@ -500,4 +511,104 @@ textarea.formInput:focus {
 .formBtn:active {
     color: #000000;
     background-color: #fff;
+}
+
+/*________________________________PROJECTS-PAGE________________________________*/
+
+#projectsHeader {
+    background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.12)), url('img/projectsBackground.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    height: 300vh;
+}
+
+#projectsHeader h2 {
+    font-size: 6rem;
+    width: 100%;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2.9em;
+    padding-right: .5em;
+    font-family: 'Aileron';
+    font-weight: 300;
+}
+
+.mainContainer {
+    padding-top: 13em;
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cardContainer,
+.cardContainer1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    cursor: pointer;
+    width: 240px;
+    height: 380px;
+    margin-right: 5em;
+    margin-bottom: 5em;
+}
+
+.front img {
+    height: 100%;
+}
+
+.middle h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+}
+
+.front,.back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img{
+    height: 100%;
+}
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.back{
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+    
+}
+
+.back-content{
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
