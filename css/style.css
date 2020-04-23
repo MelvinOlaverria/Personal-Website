@@ -82,7 +82,7 @@ ul {
 /*----------HOME-HEADER----------*/
 
 #homeHeader {
-    background: url('img/homeBackground5.JPG');
+    background: url('img/homeBackground.JPG');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -165,7 +165,7 @@ ul {
 /*----------PORTFOLIO-HEADER----------*/
 
 #portfolioHeader {
-    background: url('/css/img/portfolioBackground.JPG'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+    background: url('img/portfolioBackground.JPG'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
@@ -296,12 +296,19 @@ ul {
 /*----------ABOUT-ME-HEADING----------*/
 
 
+#aboutMeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #aboutMeText {
     color: #fff;
-    width: 75%;
-    margin: 0 auto;
-    max-width: 600px;
+    width: 70%;
+    max-width: 550px;
+    margin-top: 3em;
     position: relative;
+    top: 2em;
     bottom: 3em;
 }
 
@@ -321,21 +328,43 @@ ul {
     line-height: 200%;
 }
 
+
 /*==========================IMAGES==========================*/
 /*----------ABOUT-ME-IMAGES----------*/
 
-#aboutMeContainer figure {
-    margin: 5em auto 2em auto;
+#carousel figure:first-child img {
+    top: 1.2em;
 }
 
-#aboutMeContainer figure img {
+#carousel figure:nth-child(2) img {
+    
+}
+
+#carousel figure:nth-child(3) img {
+    bottom: 1.2em;
+}
+
+#carousel,
+#carousel figure {
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+/*==========================CAROUSEL==========================*/
+
+section#carousel > figure > img {
     width: 30em;
+    padding: 0;
+    margin: 0;
     border-radius: 50%;
-    border: 2px solid white;
-    display: block;
-    margin: 0 auto;
+    border: 1px solid white;
+    display: none;
 }
 
+section#carousel > figure.visible > img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
 
 /*==========================FOOTERS==========================*/
 
@@ -385,26 +414,25 @@ ul {
 }
 
 /*==========================QUERIES==========================*/
-/*----------ABOUT-ME-HEADER-QUERY----------*/
 
-@media screen and (min-width:1250px) {
+/*----------ABOUT-ME-QUERY----------*/
+
+@media screen and (min-width:1150px) {
     
     #aboutMeContainer {
         display: flex;
-        margin-top: 5em;
-        margin-bottom: 4em;
+        flex-direction: row;
+        padding-bottom: 9em;
     }
     
-    #aboutMeContainer figure {
-        margin-left: 20em;
+    #carousel {
+        margin-right: 7em;
+        margin-left: 15em;
+        margin-top:10em;
     }
     
-    #aboutMeContainer figure img {
-        width: 40em;
-    }
-    
-    #aboutMeText {
-        margin-top: 7em;
+    section#carousel > figure > img {
+        width: 35em;
     }
     
 }
