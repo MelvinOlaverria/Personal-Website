@@ -37,44 +37,37 @@ ul {
 
 /*==========================NAVBAR==========================*/
 
+
 .navbar {
     width: 95%;
     margin: 0 auto;
 }
 
-.nav-home {
-    background-color: rgba(0, 0, 0, 0.14);
-}
-
-
 .navbar-brand {
     color: #fff;
     font-size: 5rem;
     font-family: 'Aileron';
-    font-weight: 100;
+    font-weight: 200;
+    margin-left: 0.5em;
 }
+
 
 
 .nav-link {
     color: #fff!important;    
-    font-size: 2.3rem;
-    letter-spacing: 2px;
+    font-size: 3rem;
+    letter-spacing: 1px;
     font-family: 'Aileron';
     font-weight: 300;
-}
-
-.navbar-nav {
-    margin-right: 5em;
 }
 
 .nav-item {
     padding-right: 3em;
 }
 
-
-.nav-link:hover,
-.navbar-brand:hover {
-    color: rgba(115, 222, 191, 0.93)!important;
+.navbar-brand:hover,
+.nav-link:hover {
+    color: rgb(198, 198, 198)!important;
     transition: color 0.5s;
 }
 
@@ -82,27 +75,27 @@ ul {
 /*----------HOME-HEADER----------*/
 
 #homeHeader {
-    background: url('img/homeBackground.JPG');
+    background:url('img/homeBackground.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100%;
 }
 
 /*==========================HEADINGS==========================*/
 /*----------HOME-HEADING----------*/
 
 #mainHeadline {
-    text-align: left;
-    margin-left: 10em;
-    width: 40%;
-    height: auto;
-    margin-top:25em;
+    position: relative;
+    left: 15%;
+    width: 50%;
+    top: 2%;
 }
 
 #mainHeadline h1 {
     font-size: 4rem!important;
-    color: #fff;
-    margin-bottom: .5em;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1em;
     font-weight: 200;
     font-family: 'Aileron';
 }
@@ -111,7 +104,7 @@ ul {
     border: 2px #ffffff solid;
     border-radius: 50px;
     padding: .5em 1.1em;
-    color: yellow;
+    color: #fff;
     font-size: 2.4em;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -124,11 +117,10 @@ ul {
 
 .btn:hover {
     animation: animate 8s linear infinite;
-    background:linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background:linear-gradient(90deg, rgba(105, 250, 154, 0.94), rgb(68, 156, 242), #6393cc, rgb(79, 154, 244));
     background-size: 400%;
     color: #fff!important;
-    background-color: rgba(135, 232, 204, 0.67);
-    border: white 2px solid;
+    background-color: rgba(252, 252, 252, 0);
 }
 
 
@@ -154,6 +146,12 @@ ul {
     }
 }
 
+@media screen and (min-width:595px) {
+    #mainHeadline h1 {
+        margin-top: 4em;
+    }
+}
+
 
 /*________________________________PORTFOLIO-PAGE________________________________*/
 
@@ -165,7 +163,7 @@ ul {
 /*----------PORTFOLIO-HEADER----------*/
 
 #portfolioHeader {
-    background: url('img/portfolioBackground.JPG'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+    background: url('img/portolioBackground1.jpg'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
@@ -199,28 +197,26 @@ ul {
     margin: 0 auto;
     height: auto;
     flex-wrap: wrap;
+    justify-content: space-between;
     display: flex;
-    padding-bottom: 10em;
 }
 
 #portfolioContainer div:not(.horizontalImg) {
     width: 30em;
+    height: 35em;
     margin: 0 auto;
-    height: 40em;
     overflow: hidden;
-    margin-bottom: 2em;
-    padding-top: 2em;
 }
 
 .horizontalImg {
     margin: 0 auto;
     overflow: hidden;
     width: 40em;
+    padding-top: 4em;
 }
 
 #portfolioContainer img {
     transform: scale(0.95);
-    opacity: 0.99;
     transition: transform 0.5s, opacity 0.5s;
     width: 100%;
     height: auto;
@@ -234,7 +230,6 @@ ul {
 
 #portfolioContainer img:hover {
     transform: scale(1);
-    opacity: 1;
 }
 
 /*==========================FOOTER==========================*/
@@ -544,7 +539,7 @@ textarea.formInput:focus {
 /*________________________________PROJECTS-PAGE________________________________*/
 
 #projectsHeader {
-    background-image:linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.12)), url('img/projectsBackground.JPG');
+    background-image:url('img/projectsBackground1.JPG');
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
@@ -572,6 +567,8 @@ textarea.formInput:focus {
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+/*==========================FLIP-CARDS==========================*/
 
 .cardContainer,
 .cardContainer1 {
@@ -640,3 +637,16 @@ textarea.formInput:focus {
     background-position: center;
     height: 100%;
 }
+
+/*==========================QUERIES==========================*/
+
+@media screen and (max-width:844px){
+    #projectsHeader {
+        height: 500vh;
+    }
+    
+    .mainContainer {
+        margin-top: 60em;
+    }
+}
+ 
