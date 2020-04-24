@@ -10,13 +10,11 @@
     </head>
 
     <body>
-        <div id="allContent">
+        <header id="contactHeader">
             <nav class="navbar navbar-dark navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">Digital Imprint</a>
-                <button 
-                class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -40,55 +38,58 @@
                     </ul>
                 </div>
             </nav>
-        <main>
-            <h2>Contact</h2>
             
-            <form class="form" action="https://formspree.io/xeqlyqqz" method="post">
+            <main>
+                <h2>Contact</h2>
 
-                <div class="formItem">
-                    <label for="fullName" class="formLabel"></label>
-                    <input type="text" placeholder="Full name" required name="fullName" id="fullName" class="formInput">
-                </div>
+                <form class="form" action="https://formspree.io/xeqlyqqz" method="post">
 
-                <div class="formItem">                    
-                    <label for="email" class="formLabel"></label>
-                    <input type="email" required placeholder="Email" name="email" id="email" class="formInput">
-                </div>
+                    <div class="formItem">
+                        <label for="fullName" class="formLabel"></label>
+                        <input type="text" placeholder="Full name" required name="fullName" id="fullName" class="formInput">
+                    </div>
 
-                <div class="formItem">
-                    <label for="message" class="formLabel"></label>           
-                    <textarea maxlength="500" class="formInput" name="message" id="message" placeholder="Message"></textarea>
+                    <div class="formItem">                    
+                        <label for="email" class="formLabel"></label>
+                        <input type="email" required placeholder="Email" name="email" id="email" class="formInput">
+                    </div>
+
+                    <div class="formItem">
+                        <label for="message" class="formLabel"></label>           
+                        <textarea maxlength="500" class="formInput" name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="formItem">
+                        <button class="formBtn" type="submit">Send!</button>
+                    </div>
+                </form>
+            </main>
+            
+            <footer>
+                <div class="footer">
+                    <div class="footer1">
+                        <ul>
+                            <h3 id="footerExplore">Explore</h3>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about-me.html">About Me</a></li>
+                        </ul>
+                        <ul>
+                            <h3 id="follow">Follow</h3>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>&copy; 2020 Melvin Olaverria</p>
+                    </div>
                 </div>
-                <div class="formItem">
-                    <button class="formBtn" type="submit">
-                    Send!</button>
-                </div>
-            </form>
-        </main>
-        <footer>
-            <div class="footer">
-                <div class="footer1">
-                    <ul>
-                        <h3 id="footerExplore">Explore</h3>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about-me.html">About Me</a></li>
-                    </ul>
-                    <ul>
-                        <h3 id="follow">Follow</h3>
-                        <li>Instagram</li>
-                        <li>GitHub</li>
-                        <li>Facebook</li>
-                        <li>YouTube</li>
-                    </ul>
-                </div>
-                <div class="copyright">
-                    <li>Copyright</li>
-                </div>
-            </div>
-        </footer>
-        </div>
+            </footer>
+            
+        </header>
+        
     </body>
     
 <!--Bootstrap,jQuery,Popper-->

@@ -11,7 +11,6 @@ html {
     font-family: 'Aileron';
 }
 
-
 @font-face {
     font-family:'Aileron';
     src:url(fonts/Aileron-Regular.ttf);
@@ -25,18 +24,19 @@ ul {
     list-style: none;
 }
 
-
-
-
-
-/*________________________________HOME-PAGE________________________________*/
-
-
-
-
+h2{
+    font-size: 6rem;
+    width: 100%;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 3em;
+    padding-right: .5em;
+    font-family: 'Aileron';
+    font-weight: 300;
+}
 
 /*==========================NAVBAR==========================*/
-
 
 .navbar {
     width: 95%;
@@ -45,20 +45,18 @@ ul {
 
 .navbar-brand {
     color: #fff;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-family: 'Aileron';
     font-weight: 200;
     margin-left: 0.5em;
 }
 
-
-
 .nav-link {
     color: #fff!important;    
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
     font-family: 'Aileron';
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .nav-item {
@@ -67,195 +65,51 @@ ul {
 
 .navbar-brand:hover,
 .nav-link:hover {
-    color: rgb(198, 198, 198)!important;
+    color: rgb(132, 132, 132)!important;
     transition: color 0.5s;
 }
 
 /*==========================HEADERS==========================*/
+
 /*----------HOME-HEADER----------*/
 
 #homeHeader {
     background:url('img/homeBackground.jpg');
     background-size: cover;
-    background-position: center;
     height: 100vh;
     width: 100%;
 }
 
-/*==========================HEADINGS==========================*/
-/*----------HOME-HEADING----------*/
+/*----------PROJECTS-HEADER----------*/
 
-#mainHeadline {
-    position: relative;
-    left: 15%;
-    width: 50%;
-    top: 2%;
+#projectsHeader {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0)),url('img/projectsBackground.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    height: 300vh;
 }
 
-#mainHeadline h1 {
-    font-size: 4rem!important;
-    color: rgb(255, 255, 255);
-    margin-bottom: 1em;
-    font-weight: 200;
-    font-family: 'Aileron';
+.mainContainer {
+    padding-top: 13em;
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
-#mainHeadline a {
-    border: 2px #ffffff solid;
-    border-radius: 50px;
-    padding: .5em 1.1em;
-    color: #fff;
-    font-size: 2.4em;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    font-family: 'Alcubierre';
-}
-
-/*==========================BUTTONS==========================*/
-/*----------HOMEBUTTON----------*/
-
-
-.btn:hover {
-    animation: animate 8s linear infinite;
-    background:linear-gradient(90deg, rgba(105, 250, 154, 0.94), rgb(68, 156, 242), #6393cc, rgb(79, 154, 244));
-    background-size: 400%;
-    color: #fff!important;
-    background-color: rgba(252, 252, 252, 0);
-}
-
-
-@keyframes animate {
-    0%{
-        background-position:0%;
-
-    }
-    100% {
-        background-position: 100%;
-    
-    }
-    
-}
-
-/*==========================QUERIES==========================*/
-/*----------HOME-HEADER-QUERY----------*/
-
-@media screen and (min-width:1000px) {
-    
-    #mainHeadline h1 {
-        font-size: 4rem;
-    }
-}
-
-@media screen and (min-width:595px) {
-    #mainHeadline h1 {
-        margin-top: 4em;
-    }
-}
-
-
-/*________________________________PORTFOLIO-PAGE________________________________*/
-
-
-
-
-
-/*==========================HEADERS==========================*/
 /*----------PORTFOLIO-HEADER----------*/
 
 #portfolioHeader {
-    background: url('img/portolioBackground1.jpg'),linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0)),url('img/portolioBackground.jpg');
     background-size:cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
 }
 
-/*==========================HEADINGS==========================*/
-/*----------PORTFOLIO-HEADING----------*/
-
-
-#portfolioHeader h2 {
-    font-size: 6rem;
-    width: 100%;
-    color: #000;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 2.9em;
-    padding-right: .5em;
-    font-family: 'Aileron';
-    font-weight: 300;
-}
-
-
-/*==========================IMAGES==========================*/
-/*----------PORTFOLIO-IMAGES----------*/
-
-
-#portfolioContainer  {
-    padding-top: 5em;
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    display: flex;
-}
-
-#portfolioContainer div:not(.horizontalImg) {
-    width: 30em;
-    height: 35em;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.horizontalImg {
-    margin: 0 auto;
-    overflow: hidden;
-    width: 40em;
-    padding-top: 4em;
-}
-
-#portfolioContainer img {
-    transform: scale(0.95);
-    transition: transform 0.5s, opacity 0.5s;
-    width: 100%;
-    height: auto;
-    padding-bottom: 2em;
-    image-rendering: -moz-crisp-edges;         
-    image-rendering:   -o-crisp-edges;        
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; 
-}
-
-#portfolioContainer img:hover {
-    transform: scale(1);
-}
-
-/*==========================FOOTER==========================*/
-
-.footerp {
-    background-color: rgb(0, 0, 0);
-    background-size: 400% 400%;
-    position: relative;
-    animation: change 10s ease-in-out infinite;
-}
-
-.footerp h3 {
-    padding-top: .5em;
-}
-
-
-
-
-
-/*________________________________ABOUT-ME-PAGE________________________________*/
-
-
-
-
-
-/*==========================HEADERS==========================*/
 /*----------ABOUT-ME-HEADER----------*/
 
 #aboutMeHeader {
@@ -278,16 +132,44 @@ ul {
     }
 }
 
-#aboutMeText {
-    text-align:left;
-    width: 40%;
+/*----------CONTECT-HEADER----------*/
+
+#contactHeader {
+    background-image: linear-gradient(45deg, rgb(7, 47, 69), rgb(6, 28, 46), rgba(4, 56, 118, 0.83),rgb(4, 66, 111));
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+    font-family: 'Aileron';
 }
 
-#aboutMeContainer {
-    margin-bottom: 6em!important;
+#contactHeader h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 2em 0;
 }
 
 /*==========================HEADINGS==========================*/
+
+/*----------HOME-HEADING----------*/
+
+#mainHeadline {
+    position: relative;
+    top: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#mainHeadline h1 {
+    font-size: 4rem!important;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-family: 'Aileron';
+    position: relative;
+    margin-bottom: 1em;
+}
+
 /*----------ABOUT-ME-HEADING----------*/
 
 
@@ -295,44 +177,113 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 6em;
 }
 
 #aboutMeText {
-    color: #fff;
     width: 70%;
     max-width: 550px;
-    margin-top: 3em;
+    text-align:left;
+    font-weight: 300;
+    color: #fff;
     position: relative;
-    top: 2em;
-    bottom: 3em;
+    bottom: 10em;
 }
 
-#aboutMeText h3 {
+#aboutMeText h2 {
     text-align: left;
     font-size: 4rem;
     line-height: 130%;
     font-family: 'Alcubierre';
     margin-bottom: .7em;
-    font-weight: 300;
+    color: #fff;
 }
 
 #aboutMeText p {
     font-family: 'Aileron';
-    font-weight: 300;
     font-size: 2rem;
     line-height: 200%;
 }
 
+/*==========================BUTTONS==========================*/
+
+/*----------HOMEBUTTON----------*/
+
+.btn {
+    border: 2px #ffffff solid;
+    border-radius: 50px;
+    padding: .5em 1.1em;
+    color: #fff;
+    font-size: 2.4em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: 'Alcubierre';
+}
+
+.btn:hover {
+    animation: animate 8s linear infinite;
+    background:linear-gradient(90deg, rgba(105, 250, 154, 0.94), rgb(68, 156, 242), #6393cc, rgb(79, 154, 244));
+    background-size: 400%;
+    color: #fff!important;
+    background-color: rgba(252, 252, 252, 0);
+    
+}
+
+
+@keyframes animate {
+    0%{
+        background-position:0%;
+
+    }
+    100% {
+        background-position: 100%;
+    
+    }
+    
+}
 
 /*==========================IMAGES==========================*/
+
+/*----------PORTFOLIO-IMAGES----------*/
+
+
+#portfolioContainer  {
+    width: 84%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10em;
+}
+
+#portfolioContainer div {
+    width: 350px;
+    height: 425px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0.1em auto;
+}
+
+#portfolioContainer img {
+    transform: scale(0.95);
+    transition: transform 0.5s, opacity 0.5s;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2em;
+    image-rendering: -moz-crisp-edges;         
+    image-rendering:   -o-crisp-edges;        
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; 
+}
+
+#portfolioContainer img:hover {
+    transform: scale(1);
+}
+
 /*----------ABOUT-ME-IMAGES----------*/
 
 #carousel figure:first-child img {
     top: 1.2em;
-}
-
-#carousel figure:nth-child(2) img {
-    
 }
 
 #carousel figure:nth-child(3) img {
@@ -361,7 +312,7 @@ section#carousel > figure.visible > img {
     overflow: hidden;
 }
 
-/*==========================FOOTERS==========================*/
+/*==========================FOOTER==========================*/
 
 .footer {
     width: 100%;
@@ -408,59 +359,19 @@ section#carousel > figure.visible > img {
     margin-bottom: .5em;
 }
 
-/*==========================QUERIES==========================*/
-
-/*----------ABOUT-ME-QUERY----------*/
-
-@media screen and (min-width:1150px) {
-    
-    #aboutMeContainer {
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 9em;
-    }
-    
-    #carousel {
-        margin-right: 7em;
-        margin-left: 15em;
-        margin-top:10em;
-    }
-    
-    section#carousel > figure > img {
-        width: 35em;
-    }
-    
-}
-
-
-
-
-
-/*________________________________CONTACT-PAGE________________________________*/
-
-
-
-
-
-/*==========================HEADER==========================*/
-
-
-
-#allContent {
-    background-image: linear-gradient(45deg, rgb(7, 47, 69), rgb(6, 28, 46), rgba(4, 56, 118, 0.83),rgb(4, 66, 111));
+.footerp {
+    background-color: rgb(0, 0, 0);
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
-    font-family: 'Aileron';
 }
 
-#allContent h2 {
-    color: #fff;
+.footerp h3 {
+    padding-top: .5em;
+}
+
+.copyright {
     text-align: center;
-    font-size: 4rem;
-    font-weight: 300;
-    margin-bottom: 1em;
-    margin-top: .3em;
 }
 
 /*==========================FORMS==========================*/
@@ -536,38 +447,6 @@ textarea.formInput:focus {
     background-color: #fff;
 }
 
-/*________________________________PROJECTS-PAGE________________________________*/
-
-#projectsHeader {
-    background-image:url('img/projectsBackground1.JPG');
-    background-size: cover;
-    background-position: center;
-    background-attachment:fixed;
-    height: 300vh;
-}
-
-#projectsHeader h2 {
-    font-size: 6rem;
-    width: 100%;
-    color: #000;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 2.9em;
-    padding-right: .5em;
-    font-family: 'Aileron';
-    font-weight: 300;
-}
-
-.mainContainer {
-    padding-top: 13em;
-    width: 70%;
-    margin: 0 auto;
-    position: absolute;
-    top: 200%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
 /*==========================FLIP-CARDS==========================*/
 
 .cardContainer,
@@ -591,10 +470,11 @@ textarea.formInput:focus {
 
 .middle h2 {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: #fff;
+    color: #000;
+    font-size: 3rem;
 }
 
 .front,.back{
@@ -640,6 +520,8 @@ textarea.formInput:focus {
 
 /*==========================QUERIES==========================*/
 
+/*----------PROJECTS-QUERY----------*/
+
 @media screen and (max-width:844px){
     #projectsHeader {
         height: 500vh;
@@ -649,4 +531,39 @@ textarea.formInput:focus {
         margin-top: 60em;
     }
 }
- 
+
+/*----------CONTACT-ME-QUERY----------*/
+
+@media screen and (min-width:800px) {
+    #contactHeader h2 {
+        margin: 1.1em 0;
+    }
+}
+
+/*----------ABOUT-ME-QUERY----------*/
+
+@media screen and (min-width:1150px) {
+    
+    #aboutMeContainer {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 9em;
+    }
+    
+    #carousel {
+        margin-right: 7em;
+        margin-left: 15em;
+        margin-top:10em;
+    }
+    
+    section#carousel > figure > img {
+        width: 35em;
+    }
+    
+    #aboutMeText {
+        position: relative;
+        top: 2em;
+        left: 8em;
+    }
+    
+}
