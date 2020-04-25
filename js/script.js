@@ -10,7 +10,8 @@ function moveForward(){
             figures[i].className = "";
             pointer = i;
         }
-    }
+    } 
+    pointer = pointer +1;
     if (++pointer == figures.length) {
         pointer = 0;
     }
