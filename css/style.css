@@ -83,7 +83,7 @@ h2{
 /*----------PROJECTS-HEADER----------*/
 
 #projectsHeader {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0)),url('img/projectsBackground.JPG');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.29), rgba(0, 0, 0, 0)), url('img/projectsBackground.jpg');
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
