@@ -364,10 +364,11 @@ div#carousel > figure.visible > img {
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
+    border-top: 2px solid #fff;
 }
 
-.footerp h3 {
-    padding-top: .5em;
+.footerp  {
+    padding-top: .7em;
 }
 
 .copyright {
