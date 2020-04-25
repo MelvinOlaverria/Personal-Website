@@ -74,7 +74,11 @@ h2{
 /*----------HOME-HEADER----------*/
 
 #homeHeader {
+<<<<<<< HEAD
     background:url('img/homeBackground.png');
+=======
+    background: url('img/homeBackground.png');
+>>>>>>> d6047cb2fcfbbaee453e0efc0bf5c516a871667d
     background-size: cover;
     height: 100vh;
     width: 100%;
