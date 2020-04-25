@@ -297,7 +297,7 @@ h2{
 
 /*==========================CAROUSEL==========================*/
 
-section#carousel > figure > img {
+div#carousel > figure > img {
     width: 30em;
     padding: 0;
     margin: 0;
@@ -306,7 +306,7 @@ section#carousel > figure > img {
     display: none;
 }
 
-section#carousel > figure.visible > img {
+div#carousel > figure.visible > img {
     display: block;
     position: relative;
     overflow: hidden;
