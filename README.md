@@ -22,6 +22,7 @@ The technologies used in this project were as follows.
 - **CSS** to style every facest of the content. From background images, linear gradients, grids, flexbox, etc. 
 - **JavaScript** for the carousel in the About Me page, to cycle through 3 images at an interval of 3 seconds. 
 - **Bootstrap** for a responsive navigation, but also some custom styles were added. 
+- **Adobe XD** to create the wireframes. 
 
 ## Future Improvements 
 
