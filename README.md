@@ -19,7 +19,7 @@ This personal website is very easy to use and navigate. It is mobile friendly, a
 The technologies used in this project were as follows. 
 
 - **HTML** to markup the content as best as possible through semantic tags, as well as great web interlinkage of the pages. 
-- **CSS** to style every facest of the content. From background images, linear gradients, grids, flexbox, etc. 
+- **CSS** to style every facet of the content. From background images, linear gradients, grids, flexbox, etc. 
 - **JavaScript** for the carousel in the About Me page, to cycle through 3 images at an interval of 3 seconds. 
 - **Bootstrap** for a responsive navigation, but also some custom styles were added. 
 - **Adobe XD** to create the wireframes. 
